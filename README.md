@@ -1,4 +1,4 @@
-# Get the OpenAI API key and the OpenAI NuGet package.
+# Get the OpenAI API key and add OpenAI NuGet package.
 ```json
 https://platform.openai.com/api-keys
 ```
