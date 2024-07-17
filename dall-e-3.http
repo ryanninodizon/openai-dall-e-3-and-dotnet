@@ -1,0 +1,6 @@
+@dall_e_3_HostAddress = http://localhost:5236
+
+GET {{dall_e_3_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

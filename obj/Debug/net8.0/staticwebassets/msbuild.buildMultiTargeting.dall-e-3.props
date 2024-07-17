@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\dall-e-3.props" />
+</Project>

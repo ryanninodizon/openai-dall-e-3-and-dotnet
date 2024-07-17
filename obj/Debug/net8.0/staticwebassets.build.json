@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3mqKpR9fdZmuVP9Sr62glXZ7fPlt3JuDfHTf6PfF7g4=",
+  "Source": "dall-e-3",
+  "BasePath": "_content/dall-e-3",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
