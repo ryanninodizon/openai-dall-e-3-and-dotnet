@@ -13,7 +13,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
-
 app.MapGet("/generateImage", async Task<IResult> (string input) =>
 {
     var imageClient = new ImageClient("dall-e-3","<get API key from OpenAI portal>"); //get it from here: https://platform.openai.com/api-keys
