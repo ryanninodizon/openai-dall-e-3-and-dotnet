@@ -43,4 +43,12 @@ app.MapPost("/editGeneratedImage", async Task<IResult> () =>
     return Results.Ok(response.Value[0].ImageUri);
 });
 app.Run();
+app.MapPost("/GenerateRandomImageBasedOnFile", async Task<IResult> () =>
+{   
+    var imageClient = new ImageClient("dall-e-2","<get API key from OpenAI portal>");//get it from here: https://platform.openai.com/api-keys
+    
+    
+    return Results.Ok(new {});
+});
+app.Run();
 
