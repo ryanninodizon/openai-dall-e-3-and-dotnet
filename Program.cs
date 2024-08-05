@@ -15,8 +15,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.MapGet("/generateImage", async Task<IResult> (string input) =>
 {
-    var imageClient = new ImageClient("dall-e-3","<get API key from OpenAI portal>"); //get it from here: https://platform.openai.com/api-keys
-    
+    var imageClient = new ImageClient("dall-e-3","<get API key from OpenAI portal>"); //get it from here: https://platform.openai.com/api-keys    
     var generateOption = new ImageGenerationOptions{
         Quality = GeneratedImageQuality.High,
         Size = GeneratedImageSize.W1024xH1024,
@@ -30,8 +29,7 @@ app.MapGet("/generateImage", async Task<IResult> (string input) =>
 });
 app.MapPost("/editGeneratedImage", async Task<IResult> () =>
 {   
-    var imageClient = new ImageClient("dall-e-2","<get API key from OpenAI portal>");//get it from here: https://platform.openai.com/api-keys
-    
+    var imageClient = new ImageClient("dall-e-2","<get API key from OpenAI portal>");//get it from here: https://platform.openai.com/api-keys    
     var imageRequest = new ImageVariationOptions{
         Size = GeneratedImageSize.W1024xH1024,
         ResponseFormat = GeneratedImageFormat.Uri
@@ -45,8 +43,7 @@ app.MapPost("/editGeneratedImage", async Task<IResult> () =>
 app.Run();
 app.MapPost("/GenerateRandomImageBasedOnFile", async Task<IResult> () =>
 {   
-    var imageClient = new ImageClient("dall-e-2","<get API key from OpenAI portal>");//get it from here: https://platform.openai.com/api-keys
-    
+    var imageClient = new ImageClient("dall-e-2","<get API key from OpenAI portal>");//get it from here: https://platform.openai.com/api-keys  
     
     return Results.Ok(new {});
 });
