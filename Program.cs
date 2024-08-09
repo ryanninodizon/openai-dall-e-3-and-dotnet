@@ -40,12 +40,26 @@ app.MapPost("/editGeneratedImage", async Task<IResult> () =>
     
     return Results.Ok(response.Value[0].ImageUri);
 });
-app.Run();
 app.MapPost("/GenerateRandomImageBasedOnFile", async Task<IResult> () =>
 {   
     var imageClient = new ImageClient("dall-e-2","<get API key from OpenAI portal>");//get it from here: https://platform.openai.com/api-keys  
     
     return Results.Ok(new {});
 });
+//Audio
+app.MapPost("/transcribe", async Task<IResult> () =>
+{   
+    var openAIKEy = "<get API key from OpenAI portal>";
+
+    var audioOption = new AudioTranscriptionOptions(){
+     ResponseFormat = AudioTranscriptionFormat.Srt   
+    };
+
+    var audioClient = new AudioClient("whisper-1", openAIKEy);
+
+    var response = await audioClient.TranscribeAudioAsync("transcribe.mp4",audioOption);
+    return Results.Ok(new {response.Value.Text});
+});
+
 app.Run();
 
